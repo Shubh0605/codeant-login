@@ -1,0 +1,204 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background: white;
+    padding: 1.5rem;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .profile img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .profile select {
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex: 1;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+  }
+  
+  .nav a.active {
+    background: #f0f0f0;
+    font-weight: 500;
+  }
+  
+  .bottomNav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .bottomNav a {
+    text-decoration: none;
+    color: #666;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 2rem;
+    margin-left: 250px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .header p {
+    color: #666;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .actions button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .refresh {
+    background: white;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .add {
+    background: #0066ff;
+    color: white;
+    border: none;
+  }
+  
+  .search input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .repositories {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .repository {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .repoInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .type {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+  
+  .public {
+    background: #e1f5fe;
+    color: #0277bd;
+  }
+  
+  .private {
+    background: #fce4ec;
+    color: #c2185b;
+  }
+  
+  .repoMeta {
+    display: flex;
+    gap: 1rem;
+    color: #666;
+    font-size: 0.875rem;
+    align-items: center;
+  }
+  
+  .language {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: fixed;
+      bottom: 0;
+      top: auto;
+      padding: 1rem;
+      z-index: 10;
+    }
+  
+    .main {
+      margin-left: 0;
+      margin-bottom: 80px;
+    }
+  
+    .nav {
+      display: none;
+    }
+  
+    .profile {
+      display: none;
+    }
+  
+    .bottomNav {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }

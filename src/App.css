@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Login.module.css */
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.loginCard {
+  display: flex;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+}
+
+.leftSection {
+  flex: 1;
+  padding: 2rem;
+  background: #f8f9fa;
+}
+
+.rightSection {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.logoSmall {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+.options {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.option {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #f8f9fa;
+  cursor: pointer;
+}
+
+.option.selected {
+  background: #0066ff;
+  color: white;
+}
+
+.loginButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.loginButton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  background: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.loginButton img {
+  width: 24px;
+  height: 24px;
+}
+
+.privacy {
+  margin-top: 2rem;
+  color: #666;
+}
+
+.privacy a {
+  color: #0066ff;
+  text-decoration: none;
+}
+
+/* Repository.module.css */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: white;
+  padding: 1.5rem;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.nav a.active {
+  background: #f0f0f0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.search input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.repositories {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.repository {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e0e0e0;
+}
+
+.repoInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.type {
+  padding: 0.25rem 0.5rem;
+  background: #e0e0e0;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.repoMeta {
+  display: flex;
+  gap: 1rem;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .loginCard {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    padding: 1rem;
+  }
+  
+  .main {
+    margin-bottom: 80px;
+  }
+  
+  .nav {
+    display: none;
+  }
+  
+  .bottomNav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
